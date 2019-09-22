@@ -24,7 +24,7 @@
           <div class="promo__rect"></div>
         </div>
         <div class="promo__contact">
-          <form action="/" class="connect">
+          <form action="/" class="connect js-connect-form" id="connect" novalidate>
             <a href="#" class="connect__logo">
               <img src="../static/img/general/logo.png" width="212" height="56" alt="Logo of Tradenet">
             </a>
@@ -36,34 +36,40 @@
             <div class="connect__fields">
               <div class="connect__field form-control">
                 <input type="text" class="form-control__field form-control__field--text" aria-label="Your First Name"
-                       minlength="3" placeholder="First Name" required="">
+                       minlength="3" placeholder="First Name" name="firstName" id="connect-name" required>
+                <p class="form-control__error" aria-live="polite" role="region" aria-controls="connect-name"></p>
               </div>
               <div class="connect__field form-control">
                 <input type="text" class="form-control__field form-control__field--text" aria-label="Your Last Name"
-                       placeholder="Last Name" minlength="3" required="">
+                       placeholder="Last Name" name="fullName" id="connect-last-name" minlength="3" required>
+                <p class="form-control__error" aria-live="polite" role="region" aria-controls="connect-last-name"></p>
               </div>
               <div class="connect__field form-control">
                 <input type="email" class="form-control__field form-control__field--email" aria-label="Your email"
-                       placeholder="Email" pattern="^[A-Za-z0-9._%+-]+@{1}([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}$"
-                       required="">
+                       placeholder="Email" name="email" id="connect-email" pattern="^[A-Za-z0-9._%+-]+@{1}([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}$"
+                       required>
+                <p class="form-control__error" aria-live="polite" role="region" aria-controls="connect-email"></p>
               </div>
               <div class="connect__field form-control form-control--select">
-                <select class="form-control__field form-control__field--location" aria-label="Your country" required="">
-                  <option value="Chocolate" selected="">Romania</option>
-                  <option value="Coconut">Coconut</option>
-                  <option value="Mint">Mint</option>
-                  <option value="Strawberry">Strawberry</option>
-                  <option value="Vanilla">Vanilla</option>
+                <select class="form-control__field form-control__field--location" aria-label="Your country">
+                  <option value="Chocolate" selected>Romania</option>
+                  <option value="Coconut">Ukraine</option>
+                  <option value="Mint">England</option>
+                  <option value="Strawberry">USA</option>
+                  <option value="Vanilla">Germany</option>
                 </select>
               </div>
               <div class="connect__field form-group">
                 <div class="form-group__code form-control">
                   <input type="text" class="form-control__field form-control__field--phone-code"
-                         aria-label="Your country number" value="+40000" required="">
+                         aria-label="Your country number" name="phonePrefix" value="+40000" id="connect-country-code" required>
+                  <p class="form-control__error" aria-live="polite" role="region" aria-controls="connect-country-code"></p>
                 </div>
                 <div class="form-group__phone form-control">
-                  <input type="text" class="form-control__field form-control__field--default" aria-label="Your phone"
-                         placeholder="Phone" minlength="7" required="">
+                  <input type="text" class="form-control__field form-control__field--default"
+                         name="phone"
+                         placeholder="Phone" minlength="7" id="connect-phone" required>
+                  <p class="form-control__error" aria-live="polite" role="region" aria-controls="connect-phone"></p>
                 </div>
               </div>
             </div>
