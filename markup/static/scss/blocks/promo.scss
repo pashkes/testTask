@@ -2,6 +2,7 @@
 
   background: #A2A7B7 url(../img/general/promo-bg.jpg) 39% 0 no-repeat;
   background-size: 956px auto;
+
   @include media-md {
     background-size: 1200px auto;
   }
