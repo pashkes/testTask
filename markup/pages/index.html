@@ -2,10 +2,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./../static/scss/style.scss">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/scss/style.scss">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&amp;display=swap" rel="stylesheet">
   <title>Home</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
           <p class="promo__subtitle">
             We have educated more than
             <strong>16,000 traders worldwide</strong>
-            since 2004 & completely funded their trading accounts. You can be next
+            since 2004 &amp; completely funded their trading accounts. You can be next
           </p>
           <div class="promo__rect"></div>
         </div>
@@ -29,26 +29,27 @@
               <img src="../static/img/general/logo.png" width="212" height="56" alt="Logo of Tradenet">
             </a>
             <div class="connect__text">
-              <p class="connect__title">You&rsquo;re one step away from joining our elite trading team</p>
+              <p class="connect__title">You’re one step away from joining our elite trading team</p>
               <p>Just fill in&nbsp;the fields below with your personal&nbsp;data</p>
             </div>
 
             <div class="connect__fields">
               <div class="connect__field form-control">
                 <input type="text" class="form-control__field form-control__field--text" aria-label="Your First Name"
-                       minlength="3" placeholder="First Name" required>
+                       minlength="3" placeholder="First Name" required="">
               </div>
               <div class="connect__field form-control">
                 <input type="text" class="form-control__field form-control__field--text" aria-label="Your Last Name"
-                       placeholder="Last Name" minlength="3" required>
+                       placeholder="Last Name" minlength="3" required="">
               </div>
               <div class="connect__field form-control">
                 <input type="email" class="form-control__field form-control__field--email" aria-label="Your email"
-                       placeholder="Email" pattern="^[A-Za-z0-9._%+-]+@{1}([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}$" required>
+                       placeholder="Email" pattern="^[A-Za-z0-9._%+-]+@{1}([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}$"
+                       required="">
               </div>
               <div class="connect__field form-control form-control--select">
-                <select class="form-control__field form-control__field--location" aria-label="Your country" required>
-                  <option value="Chocolate" selected>Romania</option>
+                <select class="form-control__field form-control__field--location" aria-label="Your country" required="">
+                  <option value="Chocolate" selected="">Romania</option>
                   <option value="Coconut">Coconut</option>
                   <option value="Mint">Mint</option>
                   <option value="Strawberry">Strawberry</option>
@@ -58,11 +59,11 @@
               <div class="connect__field form-group">
                 <div class="form-group__code form-control">
                   <input type="text" class="form-control__field form-control__field--phone-code"
-                         aria-label="Your country number" value="+40000" minlength="7" required>
+                         aria-label="Your country number" value="+40000" required="">
                 </div>
                 <div class="form-group__phone form-control">
                   <input type="text" class="form-control__field form-control__field--default" aria-label="Your phone"
-                         placeholder="Phone" minlength="7" required>
+                         placeholder="Phone" minlength="7" required="">
                 </div>
               </div>
             </div>
@@ -75,9 +76,44 @@
       </div>
     </div>
   </section>
+  <section class="offer">
+    <div class="container">
+      <h2 class="offer__title h2">What we offer</h2>
+      <div class="offer__list">
+        <article class="offer__item offer__item--education">
+          <img src="../static/img/general/offer-1.svg" width="80" height="80" alt="" class="offer__img">
+          <h3 class="offer__name h3">Personalized trading education</h3>
+          <div class="offer__description">
+            <p><strong>Meir Barak</strong> and his team of&nbsp;highly skilled financial experts provide you with
+              1-on-1 personal mentorship in&nbsp;the art of&nbsp;day trading</p>
+          </div>
+
+        </article>
+        <article class="offer__item offer__item--account">
+          <img src="../static/img/general/offer-2.svg" width="80" height="80" alt="" class="offer__img">
+          <h3 class="h3 offer__name">A&nbsp;Pro Funded Account</h3>
+          <div class="offer__description">
+            <p>demo practice you will receive a&nbsp;funded trading account of&nbsp;up&nbsp;to&nbsp;$240,000.</p>
+            <p>Any losses are absorbed by&nbsp;Tradenet and you keep&nbsp;80% to&nbsp;95% of&nbsp;the profits you earn from trading</p>
+          </div>
+        </article>
+        <article class="offer__item offer__item--academy">
+          <img src="../static/img/general/offer-3.svg" alt="" width="80" height="80" class="offer__img">
+          <h3 class="h3 offer__name">Stellar trading academy</h3>
+          <div class="offer__description">
+            <ul>
+              <li>&bull; Get access to&nbsp;extensive training materials, Demo Account, live practice sessions &amp;&nbsp;much more, everything designed for your skill level</li>
+              <li>&bull; All with as&nbsp;low as&nbsp;$500!</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 </main>
 
-
 <script src="../static/js/index.js"></script>
+
+
 </body>
 </html>
