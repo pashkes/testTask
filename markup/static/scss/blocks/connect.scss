@@ -1,0 +1,74 @@
+.connect {
+  padding-top: 20px;
+  padding-bottom: 12px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+
+  @include media-lg {
+    padding-top: 62px;
+    padding-bottom: 72px;
+  }
+
+  &__fields {
+   margin-bottom: 20px;
+
+    @include media-lg {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 8px;
+    vertical-align: top;
+    width: 113px;
+    height: 30px;
+
+    @include media-lg {
+      width: 212px;
+      height: 56px;
+      margin-bottom: 28px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.71;
+
+    @include media-lg {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2px;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+    line-height: 1.42;
+
+    @include media-lg {
+      margin-bottom: 4px;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+  }
+
+  &__field  {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__submit {
+    margin-bottom: 8px;
+
+    @include media-lg {
+      margin-bottom: 32px;
+    }
+  }
+}

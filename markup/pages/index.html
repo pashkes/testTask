@@ -1,17 +1,80 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./../static/scss/style.scss">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
-    <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./../static/scss/style.scss">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
+  <title>Home</title>
 </head>
 <body>
 <main>
+  <section class="promo">
     <div class="container">
-        it's workdsd
+      <div class="promo__inner">
+        <div class="promo__intro">
+          <h1 class="promo__title">We&nbsp;teach you. We&nbsp;fund you.</h1>
+          <p class="promo__slogan">You keep most of&nbsp;the profits</p>
+          <p class="promo__subtitle">
+            We have educated more than
+            <strong>16,000 traders worldwide</strong>
+            since 2004 & completely funded their trading accounts. You can be next
+          </p>
+          <div class="promo__rect"></div>
+        </div>
+        <div class="promo__contact">
+          <form action="/" class="connect">
+            <a href="#" class="connect__logo">
+              <img src="../static/img/general/logo.png" width="212" height="56" alt="Logo of Tradenet">
+            </a>
+            <div class="connect__text">
+              <p class="connect__title">You&rsquo;re one step away from joining our elite trading team</p>
+              <p>Just fill in&nbsp;the fields below with your personal&nbsp;data</p>
+            </div>
+
+            <div class="connect__fields">
+              <div class="connect__field form-control">
+                <input type="text" class="form-control__field form-control__field--text" aria-label="Your First Name"
+                       minlength="3" placeholder="First Name" required>
+              </div>
+              <div class="connect__field form-control">
+                <input type="text" class="form-control__field form-control__field--text" aria-label="Your Last Name"
+                       placeholder="Last Name" minlength="3" required>
+              </div>
+              <div class="connect__field form-control">
+                <input type="email" class="form-control__field form-control__field--email" aria-label="Your email"
+                       placeholder="Email" pattern="^[A-Za-z0-9._%+-]+@{1}([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}$" required>
+              </div>
+              <div class="connect__field form-control form-control--select">
+                <select class="form-control__field form-control__field--location" aria-label="Your country" required>
+                  <option value="Chocolate" selected>Romania</option>
+                  <option value="Coconut">Coconut</option>
+                  <option value="Mint">Mint</option>
+                  <option value="Strawberry">Strawberry</option>
+                  <option value="Vanilla">Vanilla</option>
+                </select>
+              </div>
+              <div class="connect__field form-group">
+                <div class="form-group__code form-control">
+                  <input type="text" class="form-control__field form-control__field--phone-code"
+                         aria-label="Your country number" value="+40000" minlength="7" required>
+                </div>
+                <div class="form-group__phone form-control">
+                  <input type="text" class="form-control__field form-control__field--default" aria-label="Your phone"
+                         placeholder="Phone" minlength="7" required>
+                </div>
+              </div>
+            </div>
+            <div class="connect__footer">
+              <button type="submit" class="connect__submit button button--primary">Try a 14-day trial period</button>
+              <p>You will be&nbsp;contacted shortly by&nbsp;one of&nbsp;our trading mentors.</p>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
+  </section>
 </main>
 
 

@@ -1,0 +1,140 @@
+.promo {
+
+  background: #A2A7B7 url(../img/general/promo-bg.jpg) 39% 0 no-repeat;
+  background-size: 956px auto;
+  @include media-md {
+    background-size: 1200px auto;
+  }
+  @include media-lg {
+    background-size: cover;
+    background-position: 0 0;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include media-lg {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .container {
+    padding-right: 0;
+    padding-left: 0;
+
+    @include media-lg {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  &__intro {
+    padding: 24px 10px 12px;
+    text-align: center;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+
+    @include media-lg {
+      max-width: 510px;
+      width: 100%;
+      padding: 48px 0 86px;
+      text-align: left;
+    }
+  }
+
+  &__title {
+    margin-bottom: 4px;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.33;
+
+    @include media-lg {
+      margin-bottom: 12px;
+      font-size: 60px;
+      line-height: 1;
+    }
+  }
+
+  &__slogan {
+    position: relative;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 800;
+    color: white;
+    line-height: 1.48;
+    z-index: 0;
+
+    @include media-lg {
+      display: inline-flex;
+      margin-bottom: 24px;
+      letter-spacing: -0.05em;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: $primary;
+      z-index: -1;
+
+      @include media-lg {
+        left: -15px;
+        right: -15px;
+      }
+    }
+
+    @include media-lg {
+      font-size: 30px;
+      line-height: 1.339;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.23;
+
+    @include media-lg {
+      margin-bottom: 24px;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    strong {
+      display: block;
+      color: $primary;
+      font-weight: 800;
+      font-size: 30px;
+    }
+  }
+
+  &__rect {
+    max-width: 510px;
+    min-height: 186px;
+    margin: 0 auto;
+    background-color: $dark-grey;
+
+    @include media-lg {
+      min-height: 316px;
+    }
+  }
+
+  &__contact {
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: black;
+
+    @include media-lg {
+      max-width: 420px;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+}

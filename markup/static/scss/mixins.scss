@@ -1,11 +1,41 @@
 @mixin media-sm {
-  @media (min-width: $media-sm) { @content; }
+  @media (min-width: $media-sm) {
+    @content;
+  }
 }
 
 @mixin media-md {
-  @media (min-width: $media-md) { @content; }
+  @media (min-width: $media-md) {
+    @content;
+  }
 }
 
 @mixin media-lg {
-  @media (min-width: $media-lg) { @content; }
+  @media (min-width: $media-lg) {
+    @content;
+  }
+}
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
 }
