@@ -1,0 +1,26 @@
+body {
+}
+
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @include media-sm {
+    max-width: 540px;
+  }
+
+  @include media-md {
+    max-width: 720px;
+  }
+
+  @include media-lg {
+    max-width: 1050px;
+  }
+}
