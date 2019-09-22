@@ -1,0 +1,19 @@
+.footer {
+  background: black;
+  color: $dark-grey;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  text-align: center;
+
+  @include media-lg {
+    padding-top: 40px;
+    padding-bottom: 32px;
+  }
+
+  &__description {
+    line-height: 1.42;
+    p + p {
+      margin-top: 24px;
+    }
+  }
+}
