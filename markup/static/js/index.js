@@ -118,6 +118,7 @@
   };
 
   const onError = () => {
+    submitButton.disabled = !submitButton.disabled;
     console.error(`Something went wrong`);
   };
 
