@@ -1,8 +1,8 @@
 
 
 .offer {
-  padding-top: 38px;
-  padding-bottom: 44px;
+  padding-top: 35px;
+  padding-bottom: 48px;
   background: #fff url(../img/general/offer-bg.jpg) center 100% no-repeat;
   text-align: center;
 
@@ -23,8 +23,8 @@
     flex-wrap: wrap;
 
     @include media-lg {
-      margin-right: -$gutter-lg / 2;
-      margin-left: -$gutter-lg / 2;
+      margin-right: -$gutter-lg;
+      margin-left: -$gutter-lg;
     }
   }
 
@@ -35,7 +35,7 @@
     width: 100%;
 
     &:not(:last-child) {
-      margin-bottom: 56px;
+      margin-bottom: 58px;
 
       @include media-lg {
         margin-bottom: 0;
@@ -43,9 +43,9 @@
     }
 
     @include media-lg {
-      margin-right: 7.5px;
-      margin-left: 7.5px;
-      width: calc(100% / 3 - #{$gutter-lg});
+      margin-right: $gutter-lg;
+      margin-left: $gutter-lg;
+      width: calc(100% / 3 - #{$gutter-lg * 2});
     }
 
     &--education .offer__description {
@@ -68,7 +68,7 @@
   }
 
   &__img {
-    margin-bottom: 26px;
+    margin-bottom: 24px;
   }
 
   &__name {
@@ -82,6 +82,9 @@
       padding-left: 0;
       margin: 0;
       list-style-type: none;
+    }
+    p +p {
+      margin-top: 24px;
     }
 
     li + li {

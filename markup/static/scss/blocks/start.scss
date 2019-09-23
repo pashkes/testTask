@@ -1,5 +1,5 @@
 .start {
-  padding-top: 24px;
+  padding-top: 20px;
   padding-bottom: 28px;
   background: #329797 url(../img/general/found-bg.jpg) 0 0 no-repeat;
   text-align: center;
@@ -10,7 +10,11 @@
   }
 
   &__title {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
+
+    @include media-lg {
+      margin-bottom: 26px;
+    }
   }
 
   &__button {

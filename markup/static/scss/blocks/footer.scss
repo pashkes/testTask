@@ -11,7 +11,14 @@
   }
 
   &__description {
-    line-height: 1.42;
+    max-width: 932px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.48;
+    font-size: 14px;
+    @include media-lg {
+      line-height: 1.42;
+    }
     p + p {
       margin-top: 24px;
     }

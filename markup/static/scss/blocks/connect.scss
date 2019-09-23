@@ -1,7 +1,8 @@
 .connect {
   padding-top: 20px;
-  padding-bottom: 12px;
+  padding-bottom: 15px;
   background-color: black;
+  margin-bottom: 0;
   color: #fff;
   text-align: center;
 
@@ -20,7 +21,7 @@
 
   &__logo {
     display: inline-block;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     vertical-align: top;
     width: 113px;
     height: 30px;
@@ -28,12 +29,12 @@
     @include media-lg {
       width: 212px;
       height: 56px;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
   }
 
   &__text {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     font-size: 14px;
     line-height: 1.71;
 
@@ -50,7 +51,7 @@
     line-height: 1.42;
 
     @include media-lg {
-      margin-bottom: 4px;
+      margin-bottom: 2px;
       font-size: 20px;
       line-height: 1.2;
     }

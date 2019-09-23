@@ -125,12 +125,14 @@ img {
   }
 
   &--large {
+    padding: 12px 15px;
+    font-size: 24px;
+    letter-spacing: -0.025em;
     box-shadow: 0 6px 0 rgba(0, 0, 0, 0.25), inset 0 1px 0 #ffffff;
 
     @include media-lg {
       font-size: 36px;
-      letter-spacing: 0.025em;
-      padding: 23px 30px;
+      padding: 23px 15px;
     }
   }
   &--has-arrow {
@@ -236,6 +238,7 @@ img {
     &--location {
       background-image: url(../img/icons/location.svg);
       background-size: 15px 20px;
+      background-position: 19px center;
       padding-right: 40px;
     }
 
