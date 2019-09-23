@@ -194,14 +194,14 @@ img {
     }
   }
   &__error {
+    display: none;
     padding: 4px 0;
-    display: block;
     color: red;
     font-size: 12px;
     text-align: left;
 
-    &:first-letter {
-      text-transform: uppercase;
+    &.show {
+      display: block;
     }
   }
   &__field {

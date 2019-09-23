@@ -10,22 +10,27 @@
 
   const schema = {
     firstName: {
+      name: `First name`,
       required: true,
       minLength: 3,
     },
-    fullName: {
+    lastName: {
+      name: `Last name`,
       required: true,
       minLength: 3,
     },
     email: {
+      name: `Email`,
       required: true,
       regex: REGEX.EMAIL,
     },
     phonePrefix: {
+      name: `Country code`,
       required: true,
       regex: REGEX.COUNTRY_CODE,
     },
     phone: {
+      name: `Phone`,
       required: true,
       regex: REGEX.ONLY_NUMBERS,
       minLength: 7,
@@ -33,7 +38,7 @@
   };
 
   const errorMessages = {
-    getMinLength: (name, value, type) => `${name} must have at least ${value} ${type}`,
+    getMinLength: (name, value) => `${name} must have at least ${value} characters`,
     getRequired: (name) => `${name} is a required field`,
     getRightFormat: (value) => `Please enter a valid ${value}`,
   };
@@ -41,6 +46,7 @@
   const checkValidity = (value, schemaObject) => {
     const result = {};
     for (const item in schemaObject) {
+      if(!schemaObject.hasOwnProperty(item)) continue;
       switch (item) {
         case `required`:
           result[item] = value.length > 0;
@@ -57,24 +63,34 @@
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    const data = new FormData(form);
+    const data = [...new FormData(form)];
 
-    for (const field of data.entries()) {
+    for (const field of data) {
       const [name, value] = field;
       const input = inputs.find(item => item.name === name);
-      const validStatus = checkValidity(value, schema[name]);
       const error = input.nextElementSibling;
+      const ruleValidation = schema[name];
+      const validStatus = checkValidity(value, ruleValidation);
 
-      if (validStatus.hasOwnProperty(`required`) && !validStatus.required) {
-        error.textContent = errorMessages.getRequired(name);
-      } else if (validStatus.hasOwnProperty(`minLength`) && !validStatus.minLength) {
-        error.textContent = errorMessages.getMinLength(name, schema[name].minLength, `characters`);
-      } else if (validStatus.hasOwnProperty(`regex`) && !validStatus.regex) {
-        error.textContent = errorMessages.getRightFormat(name, `numbers`);
+      const hasRequire = validStatus.hasOwnProperty('required');
+      const hasMinLength = validStatus.hasOwnProperty('minLength');
+      const hasRegex = validStatus.hasOwnProperty('regex');
+
+      if (hasRequire && !validStatus.required) {
+        error.textContent = errorMessages.getRequired(ruleValidation.name);
+        error.classList.add(`show`)
+      } else if (hasMinLength && !validStatus.minLength) {
+        error.textContent = errorMessages.getMinLength(ruleValidation.name, ruleValidation.minLength);
+        error.classList.add(`show`)
+      } else if (hasRegex && !validStatus.regex) {
+        error.textContent = errorMessages.getRightFormat(ruleValidation.name);
+        error.classList.add(`show`)
       } else {
         error.textContent = ``;
+        error.classList.remove(`show`)
       }
     }
+
   };
 
   form && form.addEventListener(`submit`, handleSubmit);

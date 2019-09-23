@@ -37,18 +37,18 @@
               <div class="connect__field form-control">
                 <input type="text" class="form-control__field form-control__field--text" aria-label="Your First Name"
                        minlength="3" placeholder="First Name" name="firstName" id="connect-name" required>
-                <p class="form-control__error" aria-live="polite" role="region" aria-controls="connect-name"></p>
+                <span class="form-control__error" aria-live="polite" role="region" aria-controls="connect-name"></span>
               </div>
               <div class="connect__field form-control">
                 <input type="text" class="form-control__field form-control__field--text" aria-label="Your Last Name"
-                       placeholder="Last Name" name="fullName" id="connect-last-name" minlength="3" required>
-                <p class="form-control__error" aria-live="polite" role="region" aria-controls="connect-last-name"></p>
+                       placeholder="Last Name" name="lastName" id="connect-last-name" minlength="3" required>
+                <span class="form-control__error" aria-live="polite" role="region" aria-controls="connect-last-name"></span>
               </div>
               <div class="connect__field form-control">
                 <input type="email" class="form-control__field form-control__field--email" aria-label="Your email"
                        placeholder="Email" name="email" id="connect-email" pattern="^[A-Za-z0-9._%+-]+@{1}([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}$"
                        required>
-                <p class="form-control__error" aria-live="polite" role="region" aria-controls="connect-email"></p>
+                <span class="form-control__error" aria-live="polite" role="region" aria-controls="connect-email"></span>
               </div>
               <div class="connect__field form-control form-control--select">
                 <select class="form-control__field form-control__field--location" aria-label="Your country">
@@ -63,13 +63,14 @@
                 <div class="form-group__code form-control">
                   <input type="text" class="form-control__field form-control__field--phone-code"
                          aria-label="Your country number" name="phonePrefix" value="+40000" id="connect-country-code" required>
-                  <p class="form-control__error" aria-live="polite" role="region" aria-controls="connect-country-code"></p>
+                  <span class="form-control__error" aria-live="polite" role="region" aria-controls="connect-country-code"></span>
                 </div>
                 <div class="form-group__phone form-control">
                   <input type="text" class="form-control__field form-control__field--default"
                          name="phone"
+                         aria-label="Your phone"
                          placeholder="Phone" minlength="7" id="connect-phone" required>
-                  <p class="form-control__error" aria-live="polite" role="region" aria-controls="connect-phone"></p>
+                  <span class="form-control__error" aria-live="polite" role="region" aria-controls="connect-phone"></span>
                 </div>
               </div>
             </div>
