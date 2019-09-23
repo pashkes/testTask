@@ -72,4 +72,18 @@
       margin-bottom: 32px;
     }
   }
+
+  &__status-sent {
+    display: block;
+    margin-bottom: 8px;
+
+    &.error {
+      color: red;
+    }
+
+    &.success {
+      color: $green;
+    }
+
+  }
 }

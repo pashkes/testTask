@@ -14,6 +14,11 @@
   "dependencies": {
     "node-sass": "^4.12.0",
     "normalize.css": "^8.0.1",
-    "parcel-bundler": "^1.12.3"
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-static-files-copy": "^2.2.1"
+  },
+  "staticFiles": {
+    "staticPath": "php",
+    "watcherGlob": "**"
   }
 }
