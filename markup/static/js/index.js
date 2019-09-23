@@ -5,7 +5,6 @@
   const REGEX = {
     EMAIL: /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/,
     COUNTRY_CODE: /^\+[0-9]+$/,
-    ONLY_NUMBERS: /^[+]?\d*$/,
   };
 
   const schema = {
@@ -32,7 +31,7 @@
     phone: {
       name: `Phone`,
       required: true,
-      regex: REGEX.ONLY_NUMBERS,
+      integer: true,
       minLength: 7,
     }
   };
@@ -41,10 +40,12 @@
     getMinLength: (name, value) => `${name} must have at least ${value} characters`,
     getRequired: (name) => `${name} is a required field`,
     getRightFormat: (value) => `Please enter a valid ${value}`,
+    getOnlyNumbers: (value) => `${value} should be only digits`
   };
 
   const checkValidity = (value, schemaObject) => {
     const result = {};
+
     for (const item in schemaObject) {
       if(!schemaObject.hasOwnProperty(item)) continue;
       switch (item) {
@@ -56,6 +57,10 @@
           break;
         case `regex`:
           result[item] = schemaObject.regex.test(value);
+          break;
+        case `integer`:
+          result[item] = Number(value) && typeof Number(value) === 'number';
+          break;
       }
     }
     return result;
@@ -75,19 +80,23 @@
       const hasRequire = validStatus.hasOwnProperty('required');
       const hasMinLength = validStatus.hasOwnProperty('minLength');
       const hasRegex = validStatus.hasOwnProperty('regex');
+      const hasInteger = validStatus.hasOwnProperty('integer');
 
       if (hasRequire && !validStatus.required) {
         error.textContent = errorMessages.getRequired(ruleValidation.name);
-        error.classList.add(`show`)
+        error.classList.add(`show`);
+      } else if (hasInteger && !validStatus.integer){
+        error.textContent = errorMessages.getOnlyNumbers(ruleValidation.name);
+        error.classList.add(`show`);
       } else if (hasMinLength && !validStatus.minLength) {
         error.textContent = errorMessages.getMinLength(ruleValidation.name, ruleValidation.minLength);
-        error.classList.add(`show`)
-      } else if (hasRegex && !validStatus.regex) {
+        error.classList.add(`show`);
+      }  else if (hasRegex && !validStatus.regex) {
         error.textContent = errorMessages.getRightFormat(ruleValidation.name);
-        error.classList.add(`show`)
+        error.classList.add(`show`);
       } else {
         error.textContent = ``;
-        error.classList.remove(`show`)
+        error.classList.remove(`show`);
       }
     }
 
