@@ -16,5 +16,5 @@ npm run build
 ```
 **List of emails for test form**: 
  - test@gmail.com
- - test.second@gmail.com
- - test.third@gmail.com
+ - testsecond@gmail.com
+ - testthird@gmail.com
