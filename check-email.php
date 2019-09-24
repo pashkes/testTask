@@ -1,9 +1,9 @@
 <?php
-$emails = array("test@gmail.com", "test.second@gmail.com", "test.third@gmail.com");
+$emails = array("test@gmail.com", "testsecond@gmail.com", "testthird@gmail.com");
 $data = $_POST;
 $found_email = array_search($data["email"], $emails);
 
-if ($found_email === 0) {
+if ($found_email) {
   header('Content-Type: application/json');
   echo json_encode(['message' => "success"]);
 } else {
